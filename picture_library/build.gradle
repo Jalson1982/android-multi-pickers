@@ -1,5 +1,26 @@
 apply plugin: 'com.android.library'
 
+afterEvaluate {
+    publishing{
+        publications{
+            release(MavenPublication){
+                from components.release
+                groupId = 'com.reactnative.taehong.multi.img.picker'
+                artifactId = 'taehong.multi.img.picker'
+                version = '1.0'
+            }
+
+            debug(MavenPublication) {
+                // Applies the component for the debug build variant.
+                from components.debug
+                groupId = 'com.reactnative.taehong.multi.img.picker.dev'
+                artifactId = 'taehong.multi.img.picker.dev'
+                version = '1.0'
+            }
+        }
+    }
+}
+
 android {
     compileSdkVersion cfgs.compileSdkVersion
 
