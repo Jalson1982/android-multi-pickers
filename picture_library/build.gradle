@@ -1,26 +1,5 @@
 apply plugin: 'com.android.library'
 
-afterEvaluate {
-    publishing{
-        publications{
-            release(MavenPublication){
-                from components.release
-                groupId = 'com.reactnative.taehong.multi.img.picker'
-                artifactId = 'taehong.multi.img.picker'
-                version = '1.0'
-            }
-
-            debug(MavenPublication) {
-                // Applies the component for the debug build variant.
-                from components.debug
-                groupId = 'com.reactnative.taehong.multi.img.picker.dev'
-                artifactId = 'taehong.multi.img.picker.dev'
-                version = '1.0'
-            }
-        }
-    }
-}
-
 android {
     compileSdkVersion cfgs.compileSdkVersion
 
@@ -51,7 +30,8 @@ android {
     resourcePrefix 'ucrop_'
 }
 
-apply from: '../publish.gradle'
+apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"
+// apply from: '../publish.gradle' 테스트를 위해 잠시 주석
 
 dependencies {
     implementation "androidx.appcompat:appcompat:${cfgs.version_appcompat}"

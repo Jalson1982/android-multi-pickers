@@ -17,6 +17,7 @@ def projectGitUrl = localProperties.getProperty("gitUrl")
 def projectLicense = localProperties.getProperty("license")
 def projectLicenseUrl = projectLicense ? "https://opensource.org/licenses/${projectLicense.toString().replace(" ", "-")} " : null
 def developerAuthorEmail = localProperties.getProperty("email")
+def sonatypeStagingProfileId = localProperties.getProperty("sonatypeStagingProfileId")
 
 def developerAuthorId = mavenUsername
 def developerAuthorName = mavenUsername
@@ -115,7 +116,7 @@ publishing {
                 // Version control info, if you're using GitHub, follow the format as seen here
                 scm {
                     connection = "scm:git:${projectGitUrl}"
-                    developerConnection = "scm:git:${projectGitUrl}"
+                    developerConnection = "scm:git:ssh://${projectGitUrl}"
                     url = projectGitUrl
                 }
                 withXml {
@@ -131,20 +132,14 @@ publishing {
         }
     }
 
-    repositories {
-        maven {
-            name = projectArtifactId
-
-            def releasesRepoUrl = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
-            def snapshotsRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
-            // You only need this if you want to publish snapshots, otherwise just set the URL
-            // to the release repo directly
-            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
-
-            // The username and password we've fetched earlier
-            credentials {
-                username mavenUsername
-                password mavenPassword
+    nexusPublishing {
+        repositories {
+            sonatype {
+                stagingProfileId = sonatypeStagingProfileId
+                username = developerAuthorId
+                password = mavenPassword
+                nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
+                snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
             }
         }
     }
