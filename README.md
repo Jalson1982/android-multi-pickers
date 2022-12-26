@@ -27,7 +27,7 @@ repositories {
 }
 
 dependencies {
-  implementation 'io.github.lucksiege:pictureselector:v2.7.3-rc09'
+  implementation 'io.github.ko-devHong:pictureselector:v2.7.3-rc09'
 }
 ```
 
