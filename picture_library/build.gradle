@@ -30,8 +30,7 @@ android {
     resourcePrefix 'ucrop_'
 }
 
-apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"
-// apply from: '../publish.gradle' 테스트를 위해 잠시 주석
+apply from: '../publish.gradle' // 테스트를 위해 잠시 주석
 
 dependencies {
     implementation "androidx.appcompat:appcompat:${cfgs.version_appcompat}"

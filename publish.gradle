@@ -27,16 +27,16 @@ println("${mavenUsername} ${mavenPassword} - ${projectGroupId}:${projectArtifact
 println("${projectLicense} - ${projectLicenseUrl}")
 
 if (!mavenUsername || !mavenPassword || !projectGroupId || !projectArtifactId || !projectVersionName) {
-    println('Error：缺少参数')
+    println('Error：인자 누락')
     return
 }
 if (!projectDescription || !projectGitUrl || !projectLicense || !projectLicenseUrl || !developerAuthorId || !developerAuthorName || !developerAuthorEmail) {
-    println('Warning：缺少可选信息')
+    println('Warning：선택 사항 없음')
 }
 
 def isAndroidProject = project.hasProperty('android')
 if (isAndroidProject) {
-    println("使用Android工程方式发布")
+    println("Android 엔지니어링을 사용하여 게시")
     task androidJavadocs(type: Javadoc) {
         source = android.sourceSets.main.java.srcDirs
         classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
@@ -50,7 +50,7 @@ if (isAndroidProject) {
         from android.sourceSets.main.java.srcDirs
     }
 } else {
-    println("使用Java工程方式发布")
+    println("Java 엔지니어링을 사용하여 게시")
     task javadocsJar(type: Jar, dependsOn: javadoc) {
         archiveClassifier.set("javadoc")
         from javadoc.destinationDir
@@ -132,14 +132,20 @@ publishing {
         }
     }
 
-    nexusPublishing {
-        repositories {
-            sonatype {
-                stagingProfileId = sonatypeStagingProfileId
-                username = developerAuthorId
-                password = mavenPassword
-                nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
-                snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
+    repositories {
+        maven {
+            name = projectArtifactId
+
+            def releasesRepoUrl = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
+            def snapshotsRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+            // You only need this if you want to publish snapshots, otherwise just set the URL
+            // to the release repo directly
+            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+
+            // The username and password we've fetched earlier
+            credentials {
+                username mavenUsername
+                password mavenPassword
             }
         }
     }
