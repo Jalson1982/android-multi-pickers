@@ -49,6 +49,7 @@ import com.luck.picture.lib.widget.PreviewViewPager;
 import com.luck.picture.lib.widget.longimage.ImageSource;
 import com.luck.picture.lib.widget.longimage.ImageViewState;
 import com.luck.picture.lib.widget.longimage.SubsamplingScaleImageView;
+import com.yalantis.ucrop.util.RectUtils;
 
 import java.io.File;
 import java.io.InputStream;
@@ -58,9 +59,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author：luck
- * @data：2017/01/18 下午1:00
- * @描述: 预览图片
+ * @author：ko-devHong
+ * @date：2023/02/06
  */
 public class PictureExternalPreviewActivity extends PictureBaseActivity implements View.OnClickListener {
     private int mScreenWidth, mScreenHeight;
@@ -329,17 +329,18 @@ public class PictureExternalPreviewActivity extends PictureBaseActivity implemen
                 finish();
                 exitAnimation();
             });
+            String _checkPermission = RectUtils.checkImgPermission();
             if (!isHasVideo) {
                 longImageView.setOnLongClickListener(v -> {
                     if (config.isNotPreviewDownload) {
-                        if (PermissionChecker.checkSelfPermission(getContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                        if (PermissionChecker.checkSelfPermission(getContext(), _checkPermission)) {
                             downloadPath = path;
                             String currentMimeType = PictureMimeType.isHasHttp(path) && TextUtils.isEmpty(media.getMimeType()) ? PictureMimeType.getImageMimeType(media.getPath()) : media.getMimeType();
                             mMimeType = PictureMimeType.isJPG(currentMimeType) ? PictureMimeType.MIME_TYPE_JPEG : currentMimeType;
                             showDownLoadDialog();
                         } else {
                             PermissionChecker.requestPermissions(PictureExternalPreviewActivity.this,
-                                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, PictureConfig.APPLY_STORAGE_PERMISSIONS_CODE);
+                                    new String[]{_checkPermission}, PictureConfig.APPLY_STORAGE_PERMISSIONS_CODE);
                         }
                     }
                     return true;
@@ -348,14 +349,14 @@ public class PictureExternalPreviewActivity extends PictureBaseActivity implemen
             if (!isHasVideo) {
                 photoView.setOnLongClickListener(v -> {
                     if (config.isNotPreviewDownload) {
-                        if (PermissionChecker.checkSelfPermission(getContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                        if (PermissionChecker.checkSelfPermission(getContext(), _checkPermission)) {
                             downloadPath = path;
                             String currentMimeType = PictureMimeType.isHasHttp(path) && TextUtils.isEmpty(media.getMimeType()) ? PictureMimeType.getImageMimeType(media.getPath()) : media.getMimeType();
                             mMimeType = PictureMimeType.isJPG(currentMimeType) ? PictureMimeType.MIME_TYPE_JPEG : currentMimeType;
                             showDownLoadDialog();
                         } else {
                             PermissionChecker.requestPermissions(PictureExternalPreviewActivity.this,
-                                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, PictureConfig.APPLY_STORAGE_PERMISSIONS_CODE);
+                                    new String[]{_checkPermission}, PictureConfig.APPLY_STORAGE_PERMISSIONS_CODE);
                         }
                     }
                     return true;

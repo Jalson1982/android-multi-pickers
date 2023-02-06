@@ -29,8 +29,8 @@ import com.luck.picture.lib.permissions.PermissionChecker;
 import java.io.File;
 
 /**
- * @author：luck
- * @date：2020-01-04 14:05
+ * @author：ko-devHong
+ * @date：2023-02-06
  * @describe：Custom photos and videos
  */
 public class PictureCustomCameraActivity extends PictureSelectorCameraEmptyActivity {
@@ -204,6 +204,7 @@ public class PictureCustomCameraActivity extends PictureSelectorCameraEmptyActiv
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
             case PictureConfig.APPLY_STORAGE_PERMISSIONS_CODE:
                 // 存储权限

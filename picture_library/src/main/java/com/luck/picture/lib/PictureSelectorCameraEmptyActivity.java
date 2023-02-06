@@ -31,6 +31,7 @@ import com.luck.picture.lib.tools.SdkVersionUtils;
 import com.luck.picture.lib.tools.ToastUtils;
 import com.luck.picture.lib.tools.ValueOf;
 import com.yalantis.ucrop.UCrop;
+import com.yalantis.ucrop.util.RectUtils;
 
 import java.io.File;
 import java.io.InputStream;
@@ -39,8 +40,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author：luck
- * @date：2019-11-15 21:41
+ * @author：ko-devHong
+ * @date：2023-02-06
  * @describe：PictureSelectorCameraEmptyActivity
  */
 public class PictureSelectorCameraEmptyActivity extends PictureBaseActivity {
@@ -62,8 +63,9 @@ public class PictureSelectorCameraEmptyActivity extends PictureBaseActivity {
         }
         if (!config.isUseCustomCamera) {
             setActivitySize();
+            String _checkPermission = RectUtils.checkImgPermission();
             if (savedInstanceState == null) {
-                if (PermissionChecker.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                if (PermissionChecker.checkSelfPermission(this, _checkPermission)) {
 
                     if (PictureSelectionConfig.onCustomCameraInterfaceListener != null) {
                         if (config.chooseMode == PictureConfig.TYPE_VIDEO) {
@@ -76,7 +78,7 @@ public class PictureSelectorCameraEmptyActivity extends PictureBaseActivity {
                     }
                 } else {
                     PermissionChecker.requestPermissions(this, new String[]{
-                            Manifest.permission.WRITE_EXTERNAL_STORAGE}, PictureConfig.APPLY_STORAGE_PERMISSIONS_CODE);
+                            _checkPermission}, PictureConfig.APPLY_STORAGE_PERMISSIONS_CODE);
                 }
             }
         }

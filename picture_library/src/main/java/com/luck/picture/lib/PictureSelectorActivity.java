@@ -70,6 +70,7 @@ import com.luck.picture.lib.tools.ValueOf;
 import com.luck.picture.lib.widget.FolderPopWindow;
 import com.luck.picture.lib.widget.RecyclerPreloadView;
 import com.yalantis.ucrop.UCrop;
+import com.yalantis.ucrop.util.RectUtils;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -80,8 +81,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author：luck
- * @data：2018/1/27 19:12
+ * @author：ko-devHong
+ * @date：2023/02/06
  * @describe: PictureSelectorActivity
  */
 public class PictureSelectorActivity extends PictureBaseActivity implements View.OnClickListener,
@@ -2373,6 +2374,7 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
                                            @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        String _checkPermission = RectUtils.checkImgPermission();
         switch (requestCode) {
             case PictureConfig.APPLY_STORAGE_PERMISSIONS_CODE:
                 // Store Permissions
@@ -2380,7 +2382,7 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
                     readLocalMedia();
                 } else {
                     showPermissionsDialog(false, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,
-                            Manifest.permission.WRITE_EXTERNAL_STORAGE}, getString(R.string.picture_jurisdiction));
+                            _checkPermission}, getString(R.string.picture_jurisdiction));
                 }
                 break;
             case PictureConfig.APPLY_CAMERA_PERMISSIONS_CODE:
@@ -2397,7 +2399,7 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
                     startCamera();
                 } else {
                     showPermissionsDialog(false, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,
-                            Manifest.permission.WRITE_EXTERNAL_STORAGE}, getString(R.string.picture_jurisdiction));
+                            _checkPermission}, getString(R.string.picture_jurisdiction));
                 }
                 break;
         }

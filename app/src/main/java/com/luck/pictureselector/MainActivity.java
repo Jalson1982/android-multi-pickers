@@ -72,6 +72,7 @@ import com.luck.picture.lib.tools.ToastUtils;
 import com.luck.picture.lib.tools.ValueOf;
 import com.luck.pictureselector.adapter.GridImageAdapter;
 import com.luck.pictureselector.listener.DragListener;
+import com.yalantis.ucrop.util.RectUtils;
 import com.yalantis.ucrop.view.OverlayView;
 
 import org.jetbrains.annotations.NotNull;
@@ -425,15 +426,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     /**
-     * 清空缓存包括裁剪、压缩、AndroidQToPath所生成的文件，注意调用时机必须是处理完本身的业务逻辑后调用；非强制性
+     * 캐시 비우기에는 잘라내기, 압축, AndroidQToPath에서 생성된 파일이 포함됩니다. 호출 타이밍은 자신의 업무 논리를 처리한 후에 호출해야 합니다. 강제적이지 않습니다.
      */
     private void clearCache() {
-        // 清空图片缓存，包括裁剪、压缩后的图片 注意:必须要在上传完成后调用 必须要获取权限
-        if (PermissionChecker.checkSelfPermission(getContext(), Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+        // 잘라낸 사진, 압축된 사진을 포함한 사진 캐시 비우기 주의: 업로드가 완료된 후 호출해야 합니다. 권한을 얻어야 합니다.
+        String _checkPermission = RectUtils.checkImgPermission();
+        if (PermissionChecker.checkSelfPermission(getContext(), _checkPermission)) {
             //PictureCacheManager.deleteCacheDirFile(this, PictureMimeType.ofImage());
             PictureCacheManager.deleteAllCacheDirRefreshFile(getContext());
         } else {
-            PermissionChecker.requestPermissions(this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
+            PermissionChecker.requestPermissions(this, new String[]{_checkPermission},
                     PictureConfig.APPLY_STORAGE_PERMISSIONS_CODE);
         }
     }

@@ -1,6 +1,10 @@
 package com.yalantis.ucrop.util;
 
+import static android.os.Build.*;
+
+import android.Manifest;
 import android.graphics.RectF;
+import android.os.Build;
 
 public class RectUtils {
 
@@ -67,6 +71,15 @@ public class RectUtils {
         }
         r.sort();
         return r;
+    }
+
+    public static String checkImgPermission() {
+        Integer androidLevel = VERSION.SDK_INT;
+        String checkPermission = Manifest.permission.WRITE_EXTERNAL_STORAGE;
+        if(androidLevel >= 33) {
+            checkPermission = Manifest.permission.READ_MEDIA_IMAGES;
+        }
+        return checkPermission;
     }
 
 }
