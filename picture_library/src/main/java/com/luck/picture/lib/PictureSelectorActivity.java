@@ -132,13 +132,14 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
     protected void onResume() {
         super.onResume();
         if (isEnterSetting) {
+            String _checkPermission = RectUtils.checkImgPermission();
             if (PermissionChecker
-                            .checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+                            .checkSelfPermission(this, _checkPermission)) {
                 if (mAdapter.isDataEmpty()) {
                     readLocalMedia();
                 }
             } else {
-                showPermissionsDialog(false, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, getString(R.string.picture_jurisdiction));
+                showPermissionsDialog(false, new String[]{_checkPermission}, getString(R.string.picture_jurisdiction));
             }
             isEnterSetting = false;
         }
@@ -2381,8 +2382,7 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     readLocalMedia();
                 } else {
-                    showPermissionsDialog(false, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,
-                            _checkPermission}, getString(R.string.picture_jurisdiction));
+                    showPermissionsDialog(false, new String[]{ _checkPermission}, getString(R.string.picture_jurisdiction));
                 }
                 break;
             case PictureConfig.APPLY_CAMERA_PERMISSIONS_CODE:
@@ -2398,8 +2398,7 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     startCamera();
                 } else {
-                    showPermissionsDialog(false, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,
-                            _checkPermission}, getString(R.string.picture_jurisdiction));
+                    showPermissionsDialog(false, new String[]{_checkPermission}, getString(R.string.picture_jurisdiction));
                 }
                 break;
         }

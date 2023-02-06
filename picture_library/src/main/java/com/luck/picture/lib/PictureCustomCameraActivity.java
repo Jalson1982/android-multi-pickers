@@ -25,6 +25,7 @@ import com.luck.picture.lib.config.PictureSelectionConfig;
 import com.luck.picture.lib.dialog.PictureCustomDialog;
 import com.luck.picture.lib.listener.OnPermissionDialogOptionCallback;
 import com.luck.picture.lib.permissions.PermissionChecker;
+import com.yalantis.ucrop.util.RectUtils;
 
 import java.io.File;
 
@@ -63,8 +64,9 @@ public class PictureCustomCameraActivity extends PictureSelectorCameraEmptyActiv
     }
 
     private void requestCamera() {
-        if (PermissionChecker.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-            // 验证相机权限和麦克风权限
+        String _checkPermission = RectUtils.checkImgPermission();
+        if (PermissionChecker.checkSelfPermission(this, _checkPermission)) {
+            // 카메라 권한과 마이크 권한 확인
             if (PermissionChecker.checkSelfPermission(this, Manifest.permission.CAMERA)) {
                 if (config.buttonFeatures == CustomCameraView.BUTTON_STATE_ONLY_CAPTURE) {
                     mCameraView.initCamera();
@@ -82,7 +84,7 @@ public class PictureCustomCameraActivity extends PictureSelectorCameraEmptyActiv
             }
         } else {
             PermissionChecker.requestPermissions(this, new String[]{
-                    Manifest.permission.WRITE_EXTERNAL_STORAGE}, PictureConfig.APPLY_STORAGE_PERMISSIONS_CODE);
+                    _checkPermission}, PictureConfig.APPLY_STORAGE_PERMISSIONS_CODE);
         }
     }
 
@@ -90,9 +92,10 @@ public class PictureCustomCameraActivity extends PictureSelectorCameraEmptyActiv
     @Override
     protected void onResume() {
         super.onResume();
-        // 这里只针对权限被手动拒绝后进入设置页面重新获取权限后的操作
+        // 여기에서는 권한이 수동으로 거부된 후 설정 페이지로 이동하여 권한을 다시 가져오는 작업만 수행합니다
         if (isEnterSetting) {
-            if (PermissionChecker.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+            String _checkPermission = RectUtils.checkImgPermission();
+            if (PermissionChecker.checkSelfPermission(this, _checkPermission)) {
                 if (PermissionChecker.checkSelfPermission(this, Manifest.permission.CAMERA)) {
                     if (config.buttonFeatures == CustomCameraView.BUTTON_STATE_ONLY_CAPTURE) {
                         mCameraView.initCamera();
@@ -108,7 +111,7 @@ public class PictureCustomCameraActivity extends PictureSelectorCameraEmptyActiv
                     showPermissionsDialog(false, new String[]{Manifest.permission.CAMERA}, getString(R.string.picture_camera));
                 }
             } else {
-                showPermissionsDialog(false, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, getString(R.string.picture_jurisdiction));
+                showPermissionsDialog(false, new String[]{_checkPermission}, getString(R.string.picture_jurisdiction));
             }
             isEnterSetting = false;
         }
@@ -141,7 +144,7 @@ public class PictureCustomCameraActivity extends PictureSelectorCameraEmptyActiv
                 PictureSelectionConfig.imageEngine.loadImage(getContext(), file.getAbsolutePath(), imageView);
             }
         });
-        // 设置拍照或拍视频回调监听
+        // 사진 찍기 또는 비디오 콜백 듣기 설정
         mCameraView.setCameraListener(new CameraListener() {
             @Override
             public void onPictureSuccess(@NonNull File file) {
@@ -177,7 +180,7 @@ public class PictureCustomCameraActivity extends PictureSelectorCameraEmptyActiv
             }
         });
 
-        //左边按钮点击事件
+        //왼쪽 버튼 이벤트 클릭
         mCameraView.setOnClickListener(new ClickListener() {
             @Override
             public void onClick() {
@@ -205,18 +208,19 @@ public class PictureCustomCameraActivity extends PictureSelectorCameraEmptyActiv
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        String _checkPermission = RectUtils.checkImgPermission();
         switch (requestCode) {
             case PictureConfig.APPLY_STORAGE_PERMISSIONS_CODE:
-                // 存储权限
+                // 저장 권한
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     PermissionChecker.requestPermissions(this,
                             new String[]{Manifest.permission.CAMERA}, PictureConfig.APPLY_CAMERA_PERMISSIONS_CODE);
                 } else {
-                    showPermissionsDialog(true, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, getString(R.string.picture_jurisdiction));
+                    showPermissionsDialog(true, new String[]{_checkPermission}, getString(R.string.picture_jurisdiction));
                 }
                 break;
             case PictureConfig.APPLY_CAMERA_PERMISSIONS_CODE:
-                // 相机权限
+                // 카메라 권한
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     if (PermissionChecker.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO)) {
                         mCameraView.initCamera();
@@ -228,7 +232,7 @@ public class PictureCustomCameraActivity extends PictureSelectorCameraEmptyActiv
                 }
                 break;
             case PictureConfig.APPLY_RECORD_AUDIO_PERMISSIONS_CODE:
-                // 录音权限
+                // 녹음 권한
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     mCameraView.initCamera();
                 } else {
