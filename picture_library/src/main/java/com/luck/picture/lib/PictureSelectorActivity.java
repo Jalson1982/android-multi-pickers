@@ -134,7 +134,7 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
         if (isEnterSetting) {
             String _checkPermission = RectUtils.checkImgPermission();
             if (PermissionChecker
-                            .checkSelfPermission(this, _checkPermission)) {
+                    .checkSelfPermission(this, _checkPermission)) {
                 if (mAdapter.isDataEmpty()) {
                     readLocalMedia();
                 }
@@ -305,11 +305,12 @@ public class PictureSelectorActivity extends PictureBaseActivity implements View
      * load All Data
      */
     private void loadAllMediaData() {
+        String _checkPermission = RectUtils.checkImgPermission();
         if (PermissionChecker
-                .checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
+                .checkSelfPermission(this, _checkPermission)) {
             readLocalMedia();
         } else {
-            PermissionChecker.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, PictureConfig.APPLY_STORAGE_PERMISSIONS_CODE);
+            PermissionChecker.requestPermissions(this, new String[]{_checkPermission}, PictureConfig.APPLY_STORAGE_PERMISSIONS_CODE);
         }
     }
 

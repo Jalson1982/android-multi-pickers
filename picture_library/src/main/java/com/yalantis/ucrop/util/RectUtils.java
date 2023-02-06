@@ -76,7 +76,7 @@ public class RectUtils {
     public static String checkImgPermission() {
         Integer androidLevel = VERSION.SDK_INT;
         String checkPermission = Manifest.permission.WRITE_EXTERNAL_STORAGE;
-        if(androidLevel >= 33) {
+        if(androidLevel >= VERSION_CODES.TIRAMISU) {
             checkPermission = Manifest.permission.READ_MEDIA_IMAGES;
         }
         return checkPermission;

@@ -4,19 +4,15 @@ A Picture Selector for Android platform, support from the album to obtain pictur
 
 # This is https://github.com/LuckSiege/PictureSelector Fork Project
 
-[中文版 🇨🇳](README_CN.md)
-
-[Download APK](https://github.com/LuckSiege/PictureSelector/raw/master/app/demo/demo_2021-11-03_075835_v2.8.0.apk)<br>
-
 [![](https://jitpack.io/v/LuckSiege/PictureSelector.svg)](https://jitpack.io/#LuckSiege/PictureSelector)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen.svg)](https://github.com/LuckSiege)
 [![CSDN](https://img.shields.io/twitter/url/http/blog.csdn.net/luck_mw.svg?style=social)](http://blog.csdn.net/luck_mw)
-[![I](https://img.shields.io/github/issues/LuckSiege/PictureSelector.svg)](https://github.com/LuckSiege/PictureSelector/issues)
+[![I](https://img.shields.io/github/issues/LuckSiege/PictureSelector.svg)](https://github.com/ko-devHong/android-multi-pickers/issues)
 [![Star](https://img.shields.io/github/stars/LuckSiege/PictureSelector.svg)](https://github.com/LuckSiege/PictureSelector)
 
 ## Directory
 
--[Or use Gradle](#Version)<br> -[Update Log](https://github.com/LuckSiege/PictureSelector/releases/tag/v2.8.0)<br> -[Style Configuration-Xml](https://github.com/LuckSiege/PictureSelector/wiki/%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98-Xml%E6%96%B9%E5%BC%8F)<br> -[Style Configuration-Code](<https://github.com/LuckSiege/PictureSelector/wiki/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8A%A8%E6%80%81%E4%B8%BB%E9%A2%98(%E5%8C%85%E5%90%AB%E8%A3%81%E5%89%AA%E3%80%81%E7%9B%B8%E5%86%8C%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB)-Code%E6%96%B9%E5%BC%8F>)<br> -[Demo Effect](#Effect)<br> -[Api Explain](https://github.com/LuckSiege/PictureSelector/wiki/PictureSelector-Api)<br> -[PictureSelector Path Desc](https://github.com/LuckSiege/PictureSelector/wiki/PictureSelector-%E8%B7%AF%E5%BE%84%E8%AF%B4%E6%98%8E)<br> -[Open Photo Album](#Photo)<br> -[Open Camera](#Camera)<br> -[Custom Camera](#CustomCamera)<br> -[Results Callback](https://github.com/LuckSiege/PictureSelector/wiki/Result-Callback)<br> -[Cache Clear](#CacheClear)<br> -[Confusion](#Confusion)<br> -[License](#License)<br>
+-[Or use Gradle](#Version)<br> -[Update Log](https://github.com/ko-devHong/android-multi-pickers/releases/tag/v2.8.8)<br> -[Style Configuration-Xml](https://github.com/LuckSiege/PictureSelector/wiki/%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98-Xml%E6%96%B9%E5%BC%8F)<br> -[Style Configuration-Code](<https://github.com/LuckSiege/PictureSelector/wiki/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8A%A8%E6%80%81%E4%B8%BB%E9%A2%98(%E5%8C%85%E5%90%AB%E8%A3%81%E5%89%AA%E3%80%81%E7%9B%B8%E5%86%8C%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB)-Code%E6%96%B9%E5%BC%8F>)<br> -[Demo Effect](#Effect)<br> -[Api Explain](https://github.com/LuckSiege/PictureSelector/wiki/PictureSelector-Api)<br> -[PictureSelector Path Desc](https://github.com/LuckSiege/PictureSelector/wiki/PictureSelector-%E8%B7%AF%E5%BE%84%E8%AF%B4%E6%98%8E)<br> -[Open Photo Album](#Photo)<br> -[Open Camera](#Camera)<br> -[Custom Camera](#CustomCamera)<br> -[Results Callback](https://github.com/LuckSiege/PictureSelector/wiki/Result-Callback)<br> -[Cache Clear](#CacheClear)<br> -[Confusion](#Confusion)<br> -[License](#License)<br>
 
 ## Deploy
 
@@ -34,7 +30,7 @@ repositories {
 }
 
 dependencies {
-  implementation 'io.github.ko-devHong:pictureselector:v2.8.0'
+  implementation 'io.github.ko-devHong:pictureselector:v2.8.8'
 }
 ```
 
@@ -50,7 +46,7 @@ Or Maven:
 
 ## Photo
 
-Quick call, more functions [More](https://github.com/LuckSiege/PictureSelector/wiki/PictureSelector-Api)
+Quick call, more functions [More](https://github.com/ko-devHong/android-multi-pickers/wiki/PictureSelector-Api)
 
 1、onActivityResult
 
