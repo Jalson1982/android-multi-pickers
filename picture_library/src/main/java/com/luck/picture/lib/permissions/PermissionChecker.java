@@ -12,8 +12,8 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 /**
- * @author：luck
- * @date：2019-11-20 19:07
+ * @author：ko-devHong
+ * @date：2023-02-06 19:07
  * @describe：权限检查
  */
 public class PermissionChecker {

@@ -14,7 +14,7 @@ import com.luck.picture.lib.R;
 import java.io.File;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2017-5-24 17:02
  * @describe：PictureMimeType
  */

@@ -1,7 +1,7 @@
 package com.luck.picture.lib.io;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2021/8/26 3:15 下午
  * @describe：ArrayPool
  */

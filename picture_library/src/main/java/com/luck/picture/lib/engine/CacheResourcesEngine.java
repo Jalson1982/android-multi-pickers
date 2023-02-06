@@ -3,7 +3,7 @@ package com.luck.picture.lib.engine;
 import android.content.Context;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020-03-24 09:36
  * @describe：CacheResourcesEngine
  */

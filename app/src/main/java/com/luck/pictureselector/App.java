@@ -13,8 +13,8 @@ import com.luck.picture.lib.engine.PictureSelectorEngine;
 
 
 /**
- * @author：luck
- * @date：2019-12-03 22:53
+ * @author：ko-devHong
+ * @date：2023-02-06 22:53
  * @describe：Application
  */
 

@@ -5,7 +5,7 @@ import android.widget.Scroller;
 import android.view.animation.Interpolator;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020-04-11 14:41
  * @describe：MScroller
  */

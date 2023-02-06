@@ -17,8 +17,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @author：luck
- * @date：2019-11-20 13:45
+ * @author：ko-devHong
+ * @date：2023-02-06 13:45
  * @describe：本地广播
  */
 public class BroadcastManager {

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2017-1-12 21:30
  * @describe：解决预览时传值过大问题
  */

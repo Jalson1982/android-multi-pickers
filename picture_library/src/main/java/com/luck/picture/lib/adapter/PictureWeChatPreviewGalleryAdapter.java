@@ -22,8 +22,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author：luck
- * @date：2019-11-30 20:50
+ * @author：ko-devHong
+ * @date：2023-02-06 20:50
  * @describe：WeChat style selected after image preview
  */
 public class PictureWeChatPreviewGalleryAdapter

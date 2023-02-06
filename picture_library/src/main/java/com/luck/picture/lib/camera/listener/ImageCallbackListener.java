@@ -5,7 +5,7 @@ import android.widget.ImageView;
 import java.io.File;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020-01-04 15:55
  * @describe：图片加载
  */

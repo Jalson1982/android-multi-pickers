@@ -7,7 +7,7 @@ import android.view.MotionEvent;
 import androidx.viewpager.widget.ViewPager;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2016-12-31 22:12
  * @describe：PreviewViewPager
  */

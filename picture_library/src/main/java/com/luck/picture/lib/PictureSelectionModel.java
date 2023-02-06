@@ -45,7 +45,7 @@ import java.util.List;
 import static android.os.Build.VERSION_CODES.KITKAT;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2017-5-24 21:30
  * @describe：PictureSelectionModel
  */

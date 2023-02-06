@@ -9,7 +9,7 @@ import com.luck.picture.lib.listener.OnCallbackListener;
 import java.util.List;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2021/5/19 9:41 AM
  * @describe：图片压缩引擎
  */

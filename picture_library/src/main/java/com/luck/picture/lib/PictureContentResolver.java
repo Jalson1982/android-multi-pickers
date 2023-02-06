@@ -9,7 +9,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2021/5/26 9:22 PM
  * @describe：PictureContentResolver
  */

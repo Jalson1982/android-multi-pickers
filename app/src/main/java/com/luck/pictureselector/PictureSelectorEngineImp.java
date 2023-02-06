@@ -10,7 +10,7 @@ import com.luck.picture.lib.listener.OnResultCallbackListener;
 import java.util.List;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020/4/22 12:15 PM
  * @describe：PictureSelectorEngineImp
  */

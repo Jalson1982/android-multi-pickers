@@ -18,8 +18,8 @@ import com.luck.picture.lib.tools.AttrsUtils;
 import java.util.List;
 
 /**
- * @author：luck
- * @date：2019-11-30 13:27
+ * @author：ko-devHong
+ * @date：2023-02-06 13:27
  * @describe：PictureSelector WeChatStyle
  */
 public class PictureSelectorWeChatStyleActivity extends PictureSelectorActivity {

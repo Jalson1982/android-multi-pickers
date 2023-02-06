@@ -8,7 +8,7 @@ import com.luck.picture.lib.app.PictureAppMaster;
 import com.luck.picture.lib.tools.ScreenUtils;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020/11/22 11:26 AM
  * @describe：PictureUIStyle
  */

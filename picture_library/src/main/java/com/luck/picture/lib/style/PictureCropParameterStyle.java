@@ -8,8 +8,8 @@ import android.os.Parcelable;
 import androidx.annotation.ColorInt;
 
 /**
- * @author：luck
- * @date：2019-11-22 17:24
+ * @author：ko-devHong
+ * @date：2023-02-06 17:24
  * @describe：裁剪动态样式参数设置 <p>
  * {@link PictureSelectorUIStyle}
  * </>

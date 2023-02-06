@@ -10,7 +10,7 @@ import com.luck.picture.lib.thread.PictureThreadUtils;
 import java.io.File;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2021/5/28 5:50 PM
  * @describe：PictureCacheManager
  */

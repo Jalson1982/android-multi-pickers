@@ -3,8 +3,8 @@ package com.luck.picture.lib.language;
 import java.util.Locale;
 
 /**
- * @author：luck
- * @date：2019-11-25 21:58
+ * @author：ko-devHong
+ * @date：2023-02-06 21:58
  * @describe：语言转换
  */
 public class LocaleTransform {

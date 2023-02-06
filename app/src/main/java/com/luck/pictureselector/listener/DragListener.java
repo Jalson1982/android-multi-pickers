@@ -1,7 +1,7 @@
 package com.luck.pictureselector.listener;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020-01-13 17:00
  * @describe：拖拽监听事件
  */

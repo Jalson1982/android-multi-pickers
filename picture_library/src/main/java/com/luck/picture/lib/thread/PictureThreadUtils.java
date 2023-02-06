@@ -27,7 +27,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020/10/30 10:56 AM
  * @describe：ThreadPool
  */

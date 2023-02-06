@@ -5,7 +5,7 @@ import java.util.Locale;
 import java.util.concurrent.TimeUnit;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2017-5-25 23:30
  * @describe：DateUtils
  */

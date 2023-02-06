@@ -5,7 +5,7 @@ import android.content.Context;
 import android.util.DisplayMetrics;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2017-5-30 19:30
  * @describe：ScreenUtils
  */

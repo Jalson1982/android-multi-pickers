@@ -3,7 +3,7 @@ package com.luck.picture.lib.listener;
 import android.view.View;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020-03-26 10:50
  * @describe：OnItemClickListener
  */

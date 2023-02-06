@@ -28,8 +28,8 @@ import static com.luck.picture.lib.camera.CustomCameraView.BUTTON_STATE_ONLY_CAP
 import static com.luck.picture.lib.camera.CustomCameraView.BUTTON_STATE_ONLY_RECORDER;
 
 /**
- * @author：luck
- * @date：2019-01-04 13:41
+ * @author：ko-devHong
+ * @date：2023-02-06 13:41
  * @describe：CaptureLayout
  */
 

@@ -7,7 +7,7 @@ import com.luck.picture.lib.engine.CacheResourcesEngine;
 import java.io.File;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020-03-24 09:48
  * @describe：GlideCacheEngine
  */

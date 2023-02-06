@@ -5,7 +5,7 @@ import android.content.Context;
 import com.luck.picture.lib.config.PictureSelectionConfig;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020/4/27 3:24 PM
  * @describe：OnCustomCameraInterfaceListener
  */

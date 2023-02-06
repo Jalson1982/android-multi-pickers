@@ -36,7 +36,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @data：2018/1/27 下午7:50
  * @describe:PictureSimpleFragmentAdapter
  */

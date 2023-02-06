@@ -13,7 +13,7 @@ import com.luck.picture.lib.config.PictureMimeType;
 import java.util.regex.Pattern;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @data：2017/5/25 19:12
  * @描述: String Utils
  */

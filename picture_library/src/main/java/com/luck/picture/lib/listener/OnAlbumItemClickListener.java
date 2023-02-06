@@ -5,7 +5,7 @@ import com.luck.picture.lib.entity.LocalMedia;
 import java.util.List;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020-03-26 10:57
  * @describe：OnAlbumItemClickListener
  */

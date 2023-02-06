@@ -7,8 +7,8 @@ import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 
 /**
- * @author：luck
- * @date：2019-11-21 19:20
+ * @author：ko-devHong
+ * @date：2023-02-06 19:20
  * @describe：动画相关
  */
 public class AnimUtils {

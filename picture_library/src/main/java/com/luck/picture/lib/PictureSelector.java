@@ -19,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2017-5-24 22:30
  * @describe：PictureSelector
  */

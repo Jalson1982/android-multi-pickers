@@ -19,8 +19,8 @@ import com.luck.picture.lib.tools.DoubleUtils;
 
 
 /**
- * @author：luck
- * @date：2019-01-04 13:41
+ * @author：ko-devHong
+ * @date：2023-02-06 13:41
  * @describe：CaptureLayout
  */
 public class CaptureButton extends View {

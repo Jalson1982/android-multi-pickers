@@ -59,7 +59,7 @@ import java.io.File;
 import java.lang.ref.WeakReference;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020-01-04 13:41
  * @describe：自定义相机View
  */

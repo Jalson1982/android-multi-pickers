@@ -24,7 +24,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020/11/19 5:33 PM
  * @describe：UCropManager
  */

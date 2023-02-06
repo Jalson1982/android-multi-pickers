@@ -4,7 +4,7 @@ import com.luck.picture.lib.entity.LocalMedia;
 import com.luck.picture.lib.listener.OnResultCallbackListener;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020/4/22 11:36 AM
  * @describe：PictureSelectorEngine
  */

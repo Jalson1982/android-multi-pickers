@@ -9,7 +9,7 @@ import android.graphics.RectF;
 import com.squareup.picasso.Transformation;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020/4/30 11:06 AM
  * @describe：RoundedCornersTransform
  */

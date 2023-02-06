@@ -3,7 +3,7 @@ package com.luck.picture.lib.entity;
 import java.util.List;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020-04-17 13:52
  * @describe：MediaData
  */

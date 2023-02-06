@@ -8,7 +8,7 @@ import com.bumptech.glide.request.target.Target;
 import java.io.File;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020-03-23 19:08
  * @describe：获取图片缓存
  */

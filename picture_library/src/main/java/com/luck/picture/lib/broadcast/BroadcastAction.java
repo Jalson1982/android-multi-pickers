@@ -1,8 +1,8 @@
 package com.luck.picture.lib.broadcast;
 
 /**
- * @author：luck
- * @date：2019-11-20 14:01
+ * @author：ko-devHong
+ * @date：2023-02-06 14:01
  * @describe：广播Action
  */
 public class BroadcastAction {

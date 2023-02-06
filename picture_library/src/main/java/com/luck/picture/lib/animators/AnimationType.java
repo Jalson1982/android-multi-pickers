@@ -1,7 +1,7 @@
 package com.luck.picture.lib.animators;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020-04-18 15:21
  * @describe：AnimationType
  */

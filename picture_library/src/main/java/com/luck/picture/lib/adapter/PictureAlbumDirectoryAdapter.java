@@ -22,7 +22,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2016-12-11 17:02
  * @describe：PictureAlbumDirectoryAdapter
  */

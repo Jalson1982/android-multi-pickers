@@ -23,7 +23,7 @@ import com.squareup.picasso.Target;
 import java.io.File;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020/4/30 10:54 AM
  * @describe：Picasso加载引擎
  */

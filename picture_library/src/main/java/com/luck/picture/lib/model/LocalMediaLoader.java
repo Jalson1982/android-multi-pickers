@@ -24,7 +24,7 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @data：2016/12/31 19:12
  * @describe: Local media database query class
  */

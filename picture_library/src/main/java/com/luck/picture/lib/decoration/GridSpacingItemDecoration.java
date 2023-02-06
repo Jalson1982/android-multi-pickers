@@ -6,7 +6,7 @@ import android.view.View;
 import androidx.recyclerview.widget.RecyclerView;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @data：2016/12/27 下午23:50
  * @describe:GridSpacingItemDecoration
  */

@@ -12,8 +12,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 
 /**
- * @author：luck
- * @date：2019-11-08 19:25
+ * @author：ko-devHong
+ * @date：2023-02-06 19:25
  * @describe：Android Q相关处理类
  */
 public class AndroidQTransformUtils {

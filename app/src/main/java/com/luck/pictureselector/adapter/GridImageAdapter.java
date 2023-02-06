@@ -27,7 +27,7 @@ import java.util.List;
 
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2016-7-27 23:02
  * @describe：GridImageAdapter
  */

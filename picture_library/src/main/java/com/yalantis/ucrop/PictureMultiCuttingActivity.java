@@ -30,7 +30,7 @@ import java.util.List;
 import java.util.Objects;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020-01-08 19:29
  * @describe：多图裁剪
  */

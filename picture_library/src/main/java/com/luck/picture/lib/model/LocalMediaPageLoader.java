@@ -34,7 +34,7 @@ import java.util.Map;
 import java.util.Set;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020-04-13 15:06
  * @describe：Local media database query class，Support paging
  */

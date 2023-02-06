@@ -33,7 +33,7 @@ import java.util.Locale;
 import java.util.Objects;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2017-5-30 19:30
  * @describe：PictureFileUtils
  */

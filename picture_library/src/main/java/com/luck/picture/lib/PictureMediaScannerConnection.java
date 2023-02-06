@@ -6,8 +6,8 @@ import android.net.Uri;
 import android.text.TextUtils;
 
 /**
- * @author：luck
- * @date：2019-12-03 10:41
+ * @author：ko-devHong
+ * @date：2023-02-06 10:41
  * @describe：刷新相册
  */
 public class PictureMediaScannerConnection implements MediaScannerConnection.MediaScannerConnectionClient {

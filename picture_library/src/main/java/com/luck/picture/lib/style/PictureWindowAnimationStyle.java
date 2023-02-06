@@ -8,8 +8,8 @@ import androidx.annotation.AnimRes;
 import com.luck.picture.lib.R;
 
 /**
- * @author：luck
- * @date：2019-11-25 18:17
+ * @author：ko-devHong
+ * @date：2023-02-06 18:17
  * @describe：PictureSelector Activity动画管理Style
  */
 public class PictureWindowAnimationStyle implements Parcelable {

@@ -1,7 +1,7 @@
 package com.luck.picture.lib.listener;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2021/5/13 1:41 PM
  * @describe：OnPermissionDialogOptionCallback
  */

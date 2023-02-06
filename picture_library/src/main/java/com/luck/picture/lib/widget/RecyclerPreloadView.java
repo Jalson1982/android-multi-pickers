@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.luck.picture.lib.listener.OnRecyclerViewPreloadMoreListener;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020-04-14 18:43
  * @describe：RecyclerPreloadView
  */

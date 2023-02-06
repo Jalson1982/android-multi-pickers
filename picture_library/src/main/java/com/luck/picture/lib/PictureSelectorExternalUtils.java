@@ -11,7 +11,7 @@ import com.luck.picture.lib.tools.SdkVersionUtils;
 import java.io.InputStream;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020-04-12 13:13
  * @describe：PictureSelector对外提供的一些方法
  */

@@ -9,7 +9,7 @@ import android.view.animation.LinearInterpolator;
 import androidx.recyclerview.widget.RecyclerView;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020-04-18 14:12
  * @describe：BaseAnimationAdapter
  */

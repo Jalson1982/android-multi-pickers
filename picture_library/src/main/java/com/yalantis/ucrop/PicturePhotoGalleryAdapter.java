@@ -30,7 +30,7 @@ import com.luck.picture.lib.entity.LocalMedia;
 import java.util.List;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2016-12-31 22:22
  * @describe：图片列表
  */

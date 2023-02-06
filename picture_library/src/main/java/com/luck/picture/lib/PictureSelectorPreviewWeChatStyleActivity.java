@@ -22,8 +22,8 @@ import com.luck.picture.lib.tools.ScreenUtils;
 
 
 /**
- * @author：luck
- * @date：2019-11-30 17:16
+ * @author：ko-devHong
+ * @date：2023-02-06 17:16
  * @describe：PictureSelector WeChatStyle
  */
 public class PictureSelectorPreviewWeChatStyleActivity extends PicturePreviewActivity {

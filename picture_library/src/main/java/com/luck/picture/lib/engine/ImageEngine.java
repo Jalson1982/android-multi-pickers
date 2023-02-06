@@ -9,8 +9,8 @@ import com.luck.picture.lib.listener.OnImageCompleteCallback;
 import com.luck.picture.lib.widget.longimage.SubsamplingScaleImageView;
 
 /**
- * @author：luck
- * @date：2019-11-13 16:59
+ * @author：ko-devHong
+ * @date：2023-02-06 16:59
  * @describe：ImageEngine
  */
 public interface ImageEngine {

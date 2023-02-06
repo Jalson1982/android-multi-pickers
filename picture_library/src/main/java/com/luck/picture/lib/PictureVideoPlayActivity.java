@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @data：2017/8/28 下午11:00
  * @描述: 视频播放类
  */

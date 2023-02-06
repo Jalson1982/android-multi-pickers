@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2016-12-31 15:21
  * @describe：MediaFolder Entity
  */

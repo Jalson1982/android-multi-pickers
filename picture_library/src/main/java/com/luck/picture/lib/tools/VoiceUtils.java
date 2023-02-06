@@ -7,7 +7,7 @@ import android.media.SoundPool;
 import com.luck.picture.lib.R;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @data：2017/5/25 19:12
  * @描述: voice utils
  */

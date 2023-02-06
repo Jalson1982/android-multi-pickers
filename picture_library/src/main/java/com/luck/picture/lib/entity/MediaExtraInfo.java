@@ -1,7 +1,7 @@
 package com.luck.picture.lib.entity;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2021/5/18 7:30 PM
  * @describe：MediaExtraInfo
  */

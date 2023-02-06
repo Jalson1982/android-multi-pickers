@@ -2,7 +2,7 @@ package com.luck.picture.lib.listener;
 
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020-01-15 14:38
  * @describe：Custom video playback callback
  */

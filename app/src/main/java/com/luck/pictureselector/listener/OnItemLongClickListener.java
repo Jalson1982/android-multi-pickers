@@ -5,7 +5,7 @@ import android.view.View;
 import androidx.recyclerview.widget.RecyclerView;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020-01-13 17:58
  * @describe：长按事件
  */

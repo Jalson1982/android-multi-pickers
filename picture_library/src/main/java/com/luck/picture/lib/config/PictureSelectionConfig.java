@@ -31,7 +31,7 @@ import java.util.HashSet;
 import java.util.List;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2017-05-24 17:02
  * @describe：PictureSelector Config
  */

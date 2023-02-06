@@ -21,8 +21,8 @@ import com.luck.picture.lib.listener.OnItemClickListener;
 import com.luck.picture.lib.tools.ScreenUtils;
 
 /**
- * @author：luck
- * @date：2019-12-12 16:39
+ * @author：ko-devHong
+ * @date：2023-02-06 16:39
  * @describe：PhotoSelectedDialog
  */
 public class PhotoItemSelectedDialog extends DialogFragment implements View.OnClickListener {

@@ -84,9 +84,8 @@ import java.util.Collections;
 import java.util.List;
 
 /**
- * @author：luck
- * @data：2019/12/20 晚上 23:12
- * @描述: Demo
+ * @author：ko-devHong
+ * @data：2023/02/06
  */
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener,
@@ -445,7 +444,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         public void onAddPicClick() {
             boolean mode = cb_mode.isChecked();
             if (mode) {
-                // 进入相册 以下是例子：不需要的api可以不写
+                // 앨범에 들어갑니다. 다음 예: 필요 없는 API는 작성하지 않아도 됩니다.
                 PictureSelector.create(MainActivity.this)
                         .openGallery(chooseMode)// 全部.PictureMimeType.ofAll()、图片.ofImage()、视频.ofVideo()、音频.ofAudio()
                         .imageEngine(GlideEngine.createGlideEngine())// 外部传入图片加载引擎，必传项

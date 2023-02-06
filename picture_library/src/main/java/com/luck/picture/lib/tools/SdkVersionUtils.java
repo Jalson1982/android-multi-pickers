@@ -3,8 +3,8 @@ package com.luck.picture.lib.tools;
 import android.os.Build;
 
 /**
- * @author：luck
- * @date：2019-07-17 15:12
+ * @author：ko-devHong
+ * @date：2023-02-06 15:12
  * @describe：Android Sdk版本判断
  */
 public class SdkVersionUtils {

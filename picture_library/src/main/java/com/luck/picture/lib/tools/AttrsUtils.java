@@ -11,7 +11,7 @@ import androidx.core.content.ContextCompat;
 import com.luck.picture.lib.config.PictureSelectionConfig;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @data：2018/3/28 下午1:00
  * @描述: 动态获取attrs
  */

@@ -7,7 +7,7 @@ import android.view.View;
 import androidx.recyclerview.widget.RecyclerView;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020-04-18 14:11
  * @describe：AlphaInAnimationAdapter
  */

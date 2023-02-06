@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @data：2018/3/28 下午1:02
  * @描述: Rom版本管理
  */

@@ -3,7 +3,7 @@ package com.luck.picture.lib.listener;
 import android.content.Context;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2021/5/13 11:33 AM
  * @describe：Permissions Callback
  */

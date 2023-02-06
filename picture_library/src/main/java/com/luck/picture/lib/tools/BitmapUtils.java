@@ -17,7 +17,7 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020-01-15 18:22
  * @describe：BitmapUtils
  */

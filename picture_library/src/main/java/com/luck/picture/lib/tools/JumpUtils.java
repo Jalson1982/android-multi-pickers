@@ -10,8 +10,8 @@ import com.luck.picture.lib.PictureSelectorPreviewWeChatStyleActivity;
 import com.luck.picture.lib.PictureVideoPlayActivity;
 
 /**
- * @author：luck
- * @date：2019-11-23 18:57
+ * @author：ko-devHong
+ * @date：2023-02-06 18:57
  * @describe：Activity跳转
  */
 public class JumpUtils {

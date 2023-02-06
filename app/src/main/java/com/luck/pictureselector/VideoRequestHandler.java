@@ -15,7 +15,7 @@ import com.squareup.picasso.RequestHandler;
 import java.io.IOException;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020/4/30 11:32 AM
  * @describe：VideoRequestHandler
  */

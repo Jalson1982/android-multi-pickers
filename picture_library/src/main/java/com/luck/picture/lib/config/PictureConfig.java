@@ -1,7 +1,7 @@
 package com.luck.picture.lib.config;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @data：2017/5/24 1:00
  * @describe : constant
  */

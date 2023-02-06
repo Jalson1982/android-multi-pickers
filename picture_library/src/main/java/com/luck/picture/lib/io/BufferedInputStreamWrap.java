@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2021/8/26 3:21 下午
  * @describe：BufferedInputStreamWrap
  */

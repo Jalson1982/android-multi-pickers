@@ -27,8 +27,8 @@ import java.io.InputStream;
 
 
 /**
- * @author：luck
- * @date：2019-10-21 17:10
+ * @author：ko-devHong
+ * @date：2023-02-06 17:10
  * @describe：资源处理工具类
  */
 public class MediaUtils {

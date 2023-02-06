@@ -5,7 +5,7 @@ import androidx.viewpager.widget.ViewPager;
 import java.lang.reflect.Field;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020-04-11 14:43
  * @describe：MyViewPageHelper
  */

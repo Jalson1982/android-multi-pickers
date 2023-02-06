@@ -8,8 +8,8 @@ import androidx.annotation.ColorInt;
 import androidx.annotation.NonNull;
 
 /**
- * @author：luck
- * @date：2019-11-25 20:58
+ * @author：ko-devHong
+ * @date：2023-02-06 20:58
  * @describe：NavBar工具类
  */
 public class NavBarUtils {

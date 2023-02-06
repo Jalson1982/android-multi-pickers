@@ -1,8 +1,8 @@
 package com.luck.picture.lib.language;
 
 /**
- * @author：luck
- * @date：2019-11-25 21:50
+ * @author：ko-devHong
+ * @date：2023-02-06 21:50
  * @describe：语言配制
  */
 public class LanguageConfig {

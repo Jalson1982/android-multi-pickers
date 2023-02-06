@@ -1,8 +1,8 @@
 package com.luck.picture.lib.tools;
 
 /**
- * @author：luck
- * @date：2019-11-12 14:27
+ * @author：ko-devHong
+ * @date：2023-02-06 14:27
  * @describe：类型转换工具类
  */
 public class ValueOf {

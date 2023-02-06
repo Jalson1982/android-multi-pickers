@@ -3,7 +3,7 @@ package com.luck.picture.lib.listener;
 import java.util.List;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020-01-14 17:08
  * @describe：onResult Callback Listener
  */

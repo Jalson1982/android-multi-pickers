@@ -5,7 +5,7 @@ import android.content.Context;
 import java.util.List;
 
 /**
- * @author：luck
+ * @author：ko-devHong
  * @date：2020/5/31 6:42 PM
  * @describe：OnImagePreviewCallback
  */
