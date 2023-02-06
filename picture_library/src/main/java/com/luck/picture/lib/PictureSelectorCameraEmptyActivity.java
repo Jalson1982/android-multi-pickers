@@ -34,6 +34,7 @@ import com.yalantis.ucrop.UCrop;
 import com.yalantis.ucrop.util.RectUtils;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
@@ -140,34 +141,38 @@ public class PictureSelectorCameraEmptyActivity extends PictureBaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == RESULT_OK) {
-            switch (requestCode) {
-                case UCrop.REQUEST_CROP:
-                    singleCropHandleResult(data);
-                    break;
-                case PictureConfig.REQUEST_CAMERA:
-                    dispatchHandleCamera(data);
-                    break;
-                default:
-                    break;
+        try {
+            if (resultCode == RESULT_OK) {
+                switch (requestCode) {
+                    case UCrop.REQUEST_CROP:
+                        singleCropHandleResult(data);
+                        break;
+                    case PictureConfig.REQUEST_CAMERA:
+                        dispatchHandleCamera(data);
+                        break;
+                    default:
+                        break;
+                }
+            } else if (resultCode == RESULT_CANCELED) {
+                if (PictureSelectionConfig.listener != null) {
+                    PictureSelectionConfig.listener.onCancel();
+                }
+                // Delete this cameraPath when you cancel the camera
+                if (requestCode == PictureConfig.REQUEST_CAMERA) {
+                    MediaUtils.deleteCamera(this, config.cameraPath);
+                }
+                exit();
+            } else if (resultCode == UCrop.RESULT_ERROR) {
+                if (data == null) {
+                    return;
+                }
+                Throwable throwable = (Throwable) data.getSerializableExtra(UCrop.EXTRA_ERROR);
+                if (throwable != null) {
+                    ToastUtils.s(getContext(), throwable.getMessage());
+                }
             }
-        } else if (resultCode == RESULT_CANCELED) {
-            if (PictureSelectionConfig.listener != null) {
-                PictureSelectionConfig.listener.onCancel();
-            }
-            // Delete this cameraPath when you cancel the camera
-            if (requestCode == PictureConfig.REQUEST_CAMERA) {
-                MediaUtils.deleteCamera(this, config.cameraPath);
-            }
-            exit();
-        } else if (resultCode == UCrop.RESULT_ERROR) {
-            if (data == null) {
-                return;
-            }
-            Throwable throwable = (Throwable) data.getSerializableExtra(UCrop.EXTRA_ERROR);
-            if (throwable != null) {
-                ToastUtils.s(getContext(), throwable.getMessage());
-            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
         }
     }
 
@@ -176,7 +181,7 @@ public class PictureSelectorCameraEmptyActivity extends PictureBaseActivity {
      *
      * @param data
      */
-    protected void singleCropHandleResult(Intent data) {
+    protected void singleCropHandleResult(Intent data) throws IOException {
         if (data == null) {
             return;
         }

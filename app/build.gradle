@@ -6,6 +6,7 @@ static def releaseTime() {
 }
 
 android {
+    namespace 'com.luck.pictureselector'
     compileSdkVersion cfgs.compileSdkVersion
 
     defaultConfig {

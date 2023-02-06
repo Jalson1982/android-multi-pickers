@@ -18,10 +18,11 @@ A Picture Selector for Android platform, support from the album to obtain pictur
 
 -[Or use Gradle](#Version)<br> -[Update Log](https://github.com/LuckSiege/PictureSelector/releases/tag/v2.8.0)<br> -[Style Configuration-Xml](https://github.com/LuckSiege/PictureSelector/wiki/%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98-Xml%E6%96%B9%E5%BC%8F)<br> -[Style Configuration-Code](<https://github.com/LuckSiege/PictureSelector/wiki/%E8%87%AA%E5%AE%9A%E4%B9%89%E5%8A%A8%E6%80%81%E4%B8%BB%E9%A2%98(%E5%8C%85%E5%90%AB%E8%A3%81%E5%89%AA%E3%80%81%E7%9B%B8%E5%86%8C%E5%90%AF%E5%8A%A8%E5%8A%A8%E7%94%BB)-Code%E6%96%B9%E5%BC%8F>)<br> -[Demo Effect](#Effect)<br> -[Api Explain](https://github.com/LuckSiege/PictureSelector/wiki/PictureSelector-Api)<br> -[PictureSelector Path Desc](https://github.com/LuckSiege/PictureSelector/wiki/PictureSelector-%E8%B7%AF%E5%BE%84%E8%AF%B4%E6%98%8E)<br> -[Open Photo Album](#Photo)<br> -[Open Camera](#Camera)<br> -[Custom Camera](#CustomCamera)<br> -[Results Callback](https://github.com/LuckSiege/PictureSelector/wiki/Result-Callback)<br> -[Cache Clear](#CacheClear)<br> -[Confusion](#Confusion)<br> -[License](#License)<br>
 
-
 ## Deploy
+
 ```sh
-  ./gradlew publish
+ ./gradlew assembleRelease
+ ./gradlew publish
 ```
 
 ## Version
@@ -279,5 +280,3 @@ QQ [893855882]() <br>
 |             White Style             |            Video             |            Audio             |
 | :---------------------------------: | :--------------------------: | :--------------------------: |
 | ![](image/picture_white_style.jpeg) | ![](image/picture_video.jpg) | ![](image/picture_audio.jpg) |
-
-

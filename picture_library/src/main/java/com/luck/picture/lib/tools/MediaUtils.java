@@ -1,5 +1,6 @@
 package com.luck.picture.lib.tools;
 
+import android.annotation.SuppressLint;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
@@ -23,6 +24,7 @@ import com.luck.picture.lib.entity.LocalMedia;
 import com.luck.picture.lib.entity.MediaExtraInfo;
 
 import java.io.FileInputStream;
+import java.io.IOException;
 import java.io.InputStream;
 
 
@@ -246,7 +248,7 @@ public class MediaUtils {
      * @param url
      * @return
      */
-    public static MediaExtraInfo getVideoSize(Context context, String url) {
+    public static MediaExtraInfo getVideoSize(Context context, String url) throws IOException {
         MediaExtraInfo mediaExtraInfo = new MediaExtraInfo();
         MediaMetadataRetriever retriever = new MediaMetadataRetriever();
         try {
@@ -282,7 +284,7 @@ public class MediaUtils {
      * @param url
      * @return
      */
-    public static MediaExtraInfo getAudioSize(Context context, String url) {
+    public static MediaExtraInfo getAudioSize(Context context, String url) throws IOException {
         MediaExtraInfo mediaExtraInfo = new MediaExtraInfo();
         MediaMetadataRetriever retriever = new MediaMetadataRetriever();
         try {
@@ -338,8 +340,8 @@ public class MediaUtils {
                 data = context.getApplicationContext().getContentResolver().query(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, null, selection, selectionArgs, orderBy);
             }
             if (data != null && data.getCount() > 0 && data.moveToFirst()) {
-                int id = data.getInt(data.getColumnIndex(MediaStore.Images.Media._ID));
-                long date = data.getLong(data.getColumnIndex(MediaStore.Images.Media.DATE_ADDED));
+                @SuppressLint("Range") int id = data.getInt(data.getColumnIndex(MediaStore.Images.Media._ID));
+                @SuppressLint("Range") long date = data.getLong(data.getColumnIndex(MediaStore.Images.Media.DATE_ADDED));
                 int duration = DateUtils.dateDiffer(date);
                 // DCIM文件下最近时间1s以内的图片，可以判定是最新生成的重复照片
                 return duration <= 1 ? id : -1;
@@ -361,6 +363,7 @@ public class MediaUtils {
      *
      * @return
      */
+    @SuppressLint("Range")
     public static long getCameraFirstBucketId(Context context) {
         Cursor data = null;
         try {
