@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources> 
-    <string name="picture_camera_roll">Camera Roll</string>
+<resources>
+    <string name="picture_camera_roll">Kamerarulle</string>
     <string name="picture_camera_roll_num">%1$s (%2$d)</string>
     <string name="picture_cancel">Cancel</string>
-    <string name="picture_take_picture">Take image</string>
+    <string name="picture_take_picture">Ta en bild</string>
     <string name="picture_rule">not pictures or video</string>
     <string name="picture_min_video_num">Video Selection Cannot%1$sNumber</string>
     <string name="picture_message_max_num">Select up to %1$s images</string>

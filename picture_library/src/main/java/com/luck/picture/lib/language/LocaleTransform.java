@@ -28,6 +28,9 @@ public class LocaleTransform {
             case LanguageConfig.JAPAN:
                 // 日语
                 return Locale.JAPAN;
+            case LanguageConfig.SWEDISH:
+                // 韩语
+                return new Locale("sv", "SE");
             case LanguageConfig.VIETNAM:
                 // 越南语
                 return new Locale("vi");
