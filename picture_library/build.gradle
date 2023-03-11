@@ -24,13 +24,6 @@ android {
         abortOnError false
     }
 
-     publishing {
-        singleVariant("release") {
-            withSourcesJar()
-            withJavadocJar()
-        }
-    }
-
     resourcePrefix 'ucrop_'
 }
 
@@ -39,7 +32,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.Jalson1982'
             artifactId = 'android-multi-pickers'
-            version = '0.0.6'
+            version = '0.0.7'
 
             afterEvaluate {
                 from components.release
