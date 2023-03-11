@@ -1,19 +1,12 @@
 apply plugin: 'maven-publish'
 apply plugin: 'signing'
 
-Properties localProperties = new Properties()
-localProperties.load(project.rootProject.file('local.properties').newDataInputStream())
-localProperties.each { name, value ->
-    project.ext[name] = value
-}
-
-def projectGroupId = "com.github.Jalson1982.android-multi-pickers"
-def projectArtifactId = "multipicker-plus"
+def projectGroupId = "com.github.Jalson1982"
+def projectArtifactId = "https://github.com/Jalson1982/android-multi-pickers"
 def projectVersionName = cfgs.versionName
 def projectDescription = "multipicker android lib"
 def projectGitUrl = "https://github.com/Jalson1982/android-multi-pickers"
-def projectLicense = localProperties.getProperty("license")
-def projectLicenseUrl = projectLicense ? "https://opensource.org/licenses/${projectLicense.toString().replace(" ", "-")} " : null
+def projectLicenseUrl = null
 def developerAuthorEmail = "jasmin.fajkic@gmail.com"
 
 def isAndroidProject = project.hasProperty('android')
@@ -62,14 +55,15 @@ artifacts {
     archives javadocsJar, sourcesJar
 }
 
+
 publishing {
      publications {
-        maven(MavenPublication) {
-            groupId = projectGroupId
-            artifactId = projectArtifactId
-            version = '1.0.2'
+        release(MavenPublication) {
+                groupId = projectGroupId //your git id
+                artifactId = projectArtifactId //your-repository
+                version = '0.0.3' // As same as the Tag
 
-             if (isAndroidProject) {
+                  if (isAndroidProject) {
                 artifact("$buildDir/outputs/aar/${project.getName()}-release.aar")
             } else {
                 artifact("$buildDir/libs/${project.getName()}.jar")
