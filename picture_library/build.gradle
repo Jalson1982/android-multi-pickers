@@ -39,7 +39,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.Jalson1982'
             artifactId = 'demo-simple-android-lib'
-            version = '0.0.3'
+            version = '0.0.4'
 
             afterEvaluate {
                 from components.release
