@@ -39,7 +39,7 @@ publishing {
         release(MavenPublication) {
             groupId = 'com.github.Jalson1982'
             artifactId = 'android-multi-pickers'
-            version = '0.0.5'
+            version = '0.0.6'
 
             afterEvaluate {
                 from components.release
