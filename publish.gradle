@@ -7,32 +7,14 @@ localProperties.each { name, value ->
     project.ext[name] = value
 }
 
-def mavenUsername = localProperties.getProperty("sonatype.username")
-def mavenPassword = localProperties.getProperty("sonatype.password")
-def projectGroupId = localProperties.getProperty("groupId")
-def projectArtifactId = localProperties.getProperty("artifactId")
+def projectGroupId = "com.github.Jalson1982.android-multi-pickers"
+def projectArtifactId = "multipicker-plus"
 def projectVersionName = cfgs.versionName
-def projectDescription = localProperties.getProperty("description")
-def projectGitUrl = localProperties.getProperty("gitUrl")
+def projectDescription = "multipicker android lib"
+def projectGitUrl = "https://github.com/Jalson1982/android-multi-pickers"
 def projectLicense = localProperties.getProperty("license")
 def projectLicenseUrl = projectLicense ? "https://opensource.org/licenses/${projectLicense.toString().replace(" ", "-")} " : null
-def developerAuthorEmail = localProperties.getProperty("email")
-def sonatypeStagingProfileId = localProperties.getProperty("sonatypeStagingProfileId")
-
-def developerAuthorId = mavenUsername
-def developerAuthorName = mavenUsername
-
-
-println("${mavenUsername} ${mavenPassword} - ${projectGroupId}:${projectArtifactId}:${projectVersionName}")
-println("${projectLicense} - ${projectLicenseUrl}")
-
-if (!mavenUsername || !mavenPassword || !projectGroupId || !projectArtifactId || !projectVersionName) {
-    println('Error：인자 누락')
-    return
-}
-if (!projectDescription || !projectGitUrl || !projectLicense || !projectLicenseUrl || !developerAuthorId || !developerAuthorName || !developerAuthorEmail) {
-    println('Warning：선택 사항 없음')
-}
+def developerAuthorEmail = "jasmin.fajkic@gmail.com"
 
 def isAndroidProject = project.hasProperty('android')
 if (isAndroidProject) {
@@ -106,13 +88,7 @@ publishing {
                         url = projectLicenseUrl
                     }
                 }
-                developers {
-                    developer {
-                        id = developerAuthorId
-                        name = developerAuthorName
-                        email = developerAuthorEmail
-                    }
-                }
+            
                 // Version control info, if you're using GitHub, follow the format as seen here
                 scm {
                     connection = "scm:git:${projectGitUrl}"
@@ -134,19 +110,7 @@ publishing {
 
     repositories {
         maven {
-            name = projectArtifactId
-
-            def releasesRepoUrl = "https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/"
-            def snapshotsRepoUrl = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
-            // You only need this if you want to publish snapshots, otherwise just set the URL
-            // to the release repo directly
-            url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
-
-            // The username and password we've fetched earlier
-            credentials {
-                username mavenUsername
-                password mavenPassword
-            }
+            url "https://jitpack.io"
         }
     }
 }
