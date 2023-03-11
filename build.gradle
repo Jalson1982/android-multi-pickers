@@ -21,17 +21,11 @@ buildscript {
     }
 }
 
-apply plugin: 'io.github.gradle-nexus.publish-plugin'
-
 allprojects {
 
     repositories {
         google()
         mavenCentral()
-        maven {
-            url 'https://maven.google.com/'
-            name 'Google'
-        }
     }
 }
 
